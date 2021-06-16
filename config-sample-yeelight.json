@@ -1,4 +1,5 @@
 {
 	"IP": "192.168.X.XXX",
-	"BULB_TYPE": "yeelight"
+	"BULB_TYPE": "yeelight",
+	"DELAY": 0.1
 }
