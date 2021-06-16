@@ -1,0 +1,7 @@
+{
+	"CLIENT_ID": "xxxxxxxxxxxxxxxxxxxx",
+	"SECRET_KEY": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+	"DEVICE_ID": "xxxxxxxxxxxxxxxxxxxxxx",
+	"REGION_KEY": "eu",
+	"BULB_TYPE": "tuya"
+}
