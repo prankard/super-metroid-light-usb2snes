@@ -1,0 +1,35 @@
+name: Releases
+
+on: 
+  push:
+    tags:
+    - '*'
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: PyInstaller Windows
+      uses: JackMcKew/pyinstaller-action-windows@main
+      with:
+        path: .
+
+    - name: Copy files
+      run: cp config-sample-tuya.json dist/windows/config-sample-tuya.json
+    - run: cp config-sample-yeelight.json dist/windows/config-sample-yeelight.json
+    - run: cp colors.json dist/windows/colors.json
+
+    - name: Archive Release
+      uses: thedoctor0/zip-release@master
+      with:
+        path: 'dist/windows'
+        filename: 'SuperMetroidLight.zip'
+        exclusions: '*.git* /*node_modules/* .editorconfig'
+
+    - uses: ncipollo/release-action@v1
+      with:
+        artifacts: "SuperMetroidLight.zip"
+        bodyFile: "release.md"
+        token: ${{ secrets.GITHUB_TOKEN }}
