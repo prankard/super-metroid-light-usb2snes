@@ -5,7 +5,7 @@
 ### Setup
 
 - Use a compatible light (preferably YeeLight)
-- Download the latest [release](./releases)
+- Download the latest [release](../../releases)
 - Copy config-sample-bulbtype.json to config.json and fill in values
 - Run QUsb2Snes and have Snes Running
 - Run SuperMetroidLight.exe
